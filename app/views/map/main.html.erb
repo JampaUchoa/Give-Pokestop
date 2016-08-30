@@ -6,15 +6,27 @@
 
 <div id="map"></div>
 <div class="aside">
-  <div class="manual">
-  <h3> What is this? </h2>
-  <p>Foo</p>
+  <div class="manual hidden">
+    <h3> What is this? </h2>
+    <p>This is a community made map to map pontential pokestops! </p>
+    <p> All map submissions will be made public and easily acessible for everyone. </p>
+    <h3> Getting started </h2>
+    <p> Just click on the map and the place will be made a form!</p>
 
-  <h3> Getting started </h2>
-  <p>Foo</p>
+    <h3> Guidelines </h2>
+    <p>Please read <a href="https://support.ingress.com/hc/en-us/articles/207343987-Candidate-Portal-criteria"> Niantic Guidelines </a> before submiting your request.</p>
+  </div>
 
-  <h3> Guidelines </h2>
-  <p>Foo</p>
+  <div class="form">
+    <%= form_for Candidate.new, url: {action: "create", :controller=>"candidate"} do |f| %>
+      <h2> Submit </h2>
+      <h3> Pokestop name: </h3>
+      <%= f.text_field :name %>
+
+      <h3> Pokestop description: </h3>
+      <%= f.text_area :description %>
+      <%= f.submit "Create" %>
+    <% end %>
   </div>
 </div>
 

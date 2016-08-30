@@ -1,6 +1,9 @@
 // Place all the styles related to the map controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$highlight-color: blue;
+$border-color: #DEE1E5;
+
 html{
   font-family: sans-serif;
   height: 100%;
@@ -13,13 +16,17 @@ body{
   height: 100%
 }
 
+.hidden {
+  display: none;
+}
+
 h1{
   margin: 0;
 }
 
 .header{
   height: 60px;
-  border-bottom: 1px solid #DEE1E5;
+  border-bottom: 1px solid $border-color;
   h1{
     margin: 0;
     padding: 11px 15px;
@@ -36,16 +43,46 @@ h1{
   width: 400px;
 }
 
-.manual{
+.manual, .form{
   padding: 15px;
+  h2{
+    text-align: center;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: 100;
+  }
   h3{
-  text-align: center;
   font-weight: 100;
   }
 }
 
+.form{
+  input{
+    border: 0;
+    border-bottom: 1px solid #cecece;
+    outline: 0;
+    width: 100%;
+  }
+  input:focus{
+    border-bottom: 1px solid $highlight-color;
+  }
+  textarea{
+    width: 100%;
+    outline: 0;
+    border-color: #ccc;
+    resize: vertical;
+  }
+  textarea:focus{
+    border: 1px solid $highlight-color;
+  }
+}
+.manual h3{
+  text-align: center;
+}
+
+
 #footer{
   text-align: center;
-  border-top: 1px solid #DEE1E5;
+  border-top: 1px solid $border-color;
   clear: both;
 }
