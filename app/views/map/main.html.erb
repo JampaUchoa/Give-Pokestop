@@ -20,12 +20,25 @@
   <div class="form">
     <%= form_for Candidate.new, url: {action: "create", :controller=>"candidate"} do |f| %>
       <h2> Submit </h2>
-      <h3> Pokestop name: </h3>
+      <h3> Name </h3>
       <%= f.text_field :name %>
 
-      <h3> Pokestop description: </h3>
+      <h3> Description </h3>
       <%= f.text_area :description %>
-      <%= f.submit "Create" %>
+
+      <h3> Image </h3>
+      <div class="image-form">
+        <%= f.file_field :image %>
+        <%= f.text_field :remote_image_url, placeholder: "or paste an url here" %>
+      </div>
+
+      <h3> Coordinates </h3>
+
+      <%= f.text_field :latitude, disabled: true, placeholder: "Click on map" %>
+      <%= f.text_field :longitude, disabled: true, placeholder: "Click on map" %>
+
+
+      <%= f.submit "Send" %>
     <% end %>
   </div>
 </div>

@@ -52,7 +52,7 @@ h1{
     font-weight: 100;
   }
   h3{
-  font-weight: 100;
+    font-weight: 100;
   }
 }
 
@@ -62,6 +62,8 @@ h1{
     border-bottom: 1px solid #cecece;
     outline: 0;
     width: 100%;
+    margin: 2px 0 5px;
+
   }
   input:focus{
     border-bottom: 1px solid $highlight-color;
@@ -74,6 +76,18 @@ h1{
   }
   textarea:focus{
     border: 1px solid $highlight-color;
+  }
+  h3{
+    margin: 7px 0 5px;
+  }
+  .image-form{
+    background-color: #F5F5F5;
+    padding: 0 10px;
+    color: #444;
+  }
+  input[disabled]{
+    background-color: #EEE;
+    cursor: not-allowed;
   }
 }
 .manual h3{
