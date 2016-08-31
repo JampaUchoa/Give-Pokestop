@@ -7,6 +7,11 @@ class CandidateController < ApplicationController
     redirect_to "/"
   end
 
+  def show
+    canditate = Candidate.all.select("id, name, description, image, latitude, longitude, comment")
+    render json: {result: canditate}
+  end
+
   private
 
     def candidate_params

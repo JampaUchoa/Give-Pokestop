@@ -34,7 +34,7 @@ h1{
 }
 #map{
   width: calc(100% - 400px);
-  height: calc(100% - 100px);
+  height: calc(100% - 61px);
   float: left;
 }
 
@@ -93,6 +93,12 @@ h1{
   text-align: center;
 }
 
+.marker {
+    max-width: 300px;
+    img {
+        width: 100%;
+    }
+}
 
 #footer{
   text-align: center;
