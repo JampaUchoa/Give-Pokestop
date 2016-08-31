@@ -1,19 +1,32 @@
 <div class="header">
   <h1> Pokestop Suggestion </h1>
   <div class="entry">
+    <% if current_user %>
+      <%= link_to 'Log Out', logout_path, method: :delete %></li>
+    <% else %>
     <p> Join </p>
+    <% end %>
   </div>
 </div>
-
+<%#= console %>
 <div id="map"></div>
 <div class="aside">
+
+  <div class="alert alert-js hidden">
+  </div>
+
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+
   <div class="manual view">
     <h3> What is this? </h2>
     <p>This is a community made map to map pontential pokestops! </p>
     <p> All map submissions will be made public and easily acessible for everyone. </p>
     <h3> Getting started </h2>
     <p> Just click on the map to start!</p>
-
     <h3> Guidelines </h2>
     <p>Please read <a href="https://support.ingress.com/hc/en-us/articles/207343987-Candidate-Portal-criteria"> Niantic Guidelines </a> before submiting your request.</p>
   </div>
@@ -45,6 +58,16 @@
       <%= f.submit "Send" %>
     <% end %>
   </div>
+
+  <div class="login view hidden">
+    <h3> Please login to create and vote on Pokestops </h3>
+    <%#= link_to 'Twitter', '/auth/twitter' %>
+    <div class="social-container">
+      <a href="/auth/facebook"> <img class="social-login" src="<%= image_path 'loginfacebook.png' %>"></a>
+    </div>
+    <i> Your information (name, image) will remain private until you choose not to, this is necessary to prevent spam. </i>
+  </div>
+
 </div>
 
 <div id="footer">

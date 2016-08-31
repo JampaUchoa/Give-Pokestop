@@ -124,12 +124,28 @@ function poll() {
 function toggleView(view){
   $(".view").addClass("hidden");
   $("."+ view +"").removeClass("hidden");
+  flashClear();
 }
 
 $(document).on('turbolinks:load', function() {
 
   $('#map').on('click', '#add-candidate', function () {
+    if (loggedIn){
       toggleView("form");
+    } else{
+      flash("You must log in to add a Pokestop");
+      toggleView("login");
+    }
   });
 
 });
+
+function flash(text) {
+  $(".alert-js").removeClass("hidden");
+  $(".alert-js").text(text);
+
+}
+
+function flashClear() {
+  $(".alert-js").addClass("hidden");
+}

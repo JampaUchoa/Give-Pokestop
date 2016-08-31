@@ -13,6 +13,9 @@
 
   <body>
     <%= yield %>
+    <script>
+    loggedIn = <%= !!current_user %>;
+    </script>
     <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNL4T60Jhr-30IesSLKDdpZvUeRRQRb0I&callback=initMap"></script>
   </body>
 </html>

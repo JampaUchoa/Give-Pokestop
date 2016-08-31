@@ -58,7 +58,7 @@ h1{
   width: 400px;
 }
 
-.manual, .form{
+.view {
   padding: 15px;
   h2{
     text-align: center;
@@ -115,6 +115,23 @@ h1{
     }
 }
 
+.social-container{
+  padding: 10px;
+}
+.social-login {
+  width: 100%;
+}
+
+.alert{
+  padding: 10px;
+  background-color: rgb(255, 107, 5);
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+.alert-success{
+  background-color: #17b52b;
+}
 #add-candidate{
 
   /* background-color: blue; */

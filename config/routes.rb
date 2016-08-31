@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   root 'map#main'
   post '/candidate/submit', to: 'candidate#create'
   get '/candidate', to: 'candidate#show'
+  get '/auth/:provider/callback', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
 end
