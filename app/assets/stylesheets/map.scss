@@ -85,9 +85,8 @@ h1{
     padding: 0 10px;
     color: #444;
   }
-  input[disabled]{
-    background-color: #EEE;
-    cursor: not-allowed;
+  input[type="file"]{
+    border: 0;
   }
 }
 .manual h3{

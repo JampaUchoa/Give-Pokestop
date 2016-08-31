@@ -27,15 +27,19 @@
       <%= f.text_area :description %>
 
       <h3> Image </h3>
+
+      <%= f.file_field :image %>
+
       <div class="image-form">
-        <%= f.file_field :image %>
-        <%= f.text_field :remote_image_url, placeholder: "or paste an url here" %>
+        <%#= f.text_field :remote_image_url, placeholder: "or paste an url here" %>
       </div>
 
-      <h3> Coordinates </h3>
+      <%= f.hidden_field :latitude, placeholder: "Click on the map" %>
+      <%= f.hidden_field :longitude, placeholder: "Click on the map" %>
 
-      <%= f.text_field :latitude, disabled: true, placeholder: "Click on map" %>
-      <%= f.text_field :longitude, disabled: true, placeholder: "Click on map" %>
+      <h3> Comments </h3>
+
+      <%= f.text_area :comment, placeholder: "Optional" %>
 
 
       <%= f.submit "Send" %>
@@ -44,5 +48,5 @@
 </div>
 
 <div id="footer">
-<p> Hi, I'm a footer </p>
+<p>  </p>
 </div>

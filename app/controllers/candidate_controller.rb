@@ -1,5 +1,15 @@
 class CandidateController < ApplicationController
   def create
-
+    candidate = Candidate.new(candidate_params)
+    if candidate.save
+      #
+    end
+    redirect_to "/"
   end
+
+  private
+
+    def candidate_params
+      params.require(:candidate).permit(:name, :description, :image, :latitude, :longitude, :comment)
+    end
 end
