@@ -6,12 +6,12 @@
 
 <div id="map"></div>
 <div class="aside">
-  <div class="manual hidden">
+  <div class="manual ">
     <h3> What is this? </h2>
     <p>This is a community made map to map pontential pokestops! </p>
     <p> All map submissions will be made public and easily acessible for everyone. </p>
     <h3> Getting started </h2>
-    <p> Just click on the map and the place will be made a form!</p>
+    <p> Just click on the map to start!</p>
 
     <h3> Guidelines </h2>
     <p>Please read <a href="https://support.ingress.com/hc/en-us/articles/207343987-Candidate-Portal-criteria"> Niantic Guidelines </a> before submiting your request.</p>
@@ -21,14 +21,14 @@
     <%= form_for Candidate.new, url: {action: "create", :controller=>"candidate"} do |f| %>
       <h2> Submit </h2>
       <h3> Name </h3>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, required: true, :maxlength => 20, :minlength => 2, placeholder: "If possible, use a official name." %>
 
       <h3> Description </h3>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, :maxlength => 140, placeholder: "Include a description about the place." %>
 
       <h3> Image </h3>
 
-      <%= f.file_field :image %>
+      <%= f.file_field :image, required: true %>
 
       <div class="image-form">
         <%#= f.text_field :remote_image_url, placeholder: "or paste an url here" %>
@@ -39,8 +39,7 @@
 
       <h3> Comments </h3>
 
-      <%= f.text_area :comment, placeholder: "Optional" %>
-
+      <%= f.text_area :comment, placeholder: "Tell why this should be a Pokestop. Optional" %>
 
       <%= f.submit "Send" %>
     <% end %>

@@ -48,4 +48,11 @@ class PlaceUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  def filename
+    if original_filename
+      @name ||= model.name.parameterize
+      "#{@name}.#{file.extension}"
+    end
+  end
+
 end
