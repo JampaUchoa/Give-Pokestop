@@ -1,6 +1,7 @@
 <div class="header">
   <h1> Pokestop Suggestion </h1>
   <div class="entry">
+    <p> Join </p>
   </div>
 </div>
 
@@ -17,7 +18,7 @@
     <p>Please read <a href="https://support.ingress.com/hc/en-us/articles/207343987-Candidate-Portal-criteria"> Niantic Guidelines </a> before submiting your request.</p>
   </div>
 
-  <div class="form view">
+  <div class="form view hidden">
     <%= form_for Candidate.new, url: {action: "create", :controller=>"candidate"} do |f| %>
       <h2> Submit </h2>
       <h3> Name </h3>
