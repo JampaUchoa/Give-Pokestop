@@ -28,17 +28,22 @@ function initMap() {
       });
 
       newMarker.infoWindow = new google.maps.InfoWindow({
-          content: "Here?",
+          content: "<div id='add-candidate'> Add a pokestop here! </div>",
           disableAutoPan: false
       });
       newMarker.infoWindow.open(map, newMarker);
 
+
+
       google.maps.event.addListener(newMarker.infoWindow,'closeclick',function(){
           newMarker.setMap(null); //removes the marker
           inputCoords("","");
+          toggleView("manual");
       });
 
+
       inputCoords(newMarker.getPosition().lat(), newMarker.getPosition().lng());
+
   });
 
 }
@@ -115,3 +120,16 @@ function poll() {
           console.log("fail");
         });
 }
+
+function toggleView(view){
+  $(".view").addClass("hidden");
+  $("."+ view +"").removeClass("hidden");
+}
+
+$(document).on('turbolinks:load', function() {
+
+  $('#map').on('click', '#add-candidate', function () {
+      toggleView("form");
+  });
+
+});

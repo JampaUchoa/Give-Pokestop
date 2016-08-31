@@ -6,7 +6,7 @@
 
 <div id="map"></div>
 <div class="aside">
-  <div class="manual ">
+  <div class="manual view">
     <h3> What is this? </h2>
     <p>This is a community made map to map pontential pokestops! </p>
     <p> All map submissions will be made public and easily acessible for everyone. </p>
@@ -17,7 +17,7 @@
     <p>Please read <a href="https://support.ingress.com/hc/en-us/articles/207343987-Candidate-Portal-criteria"> Niantic Guidelines </a> before submiting your request.</p>
   </div>
 
-  <div class="form">
+  <div class="form view">
     <%= form_for Candidate.new, url: {action: "create", :controller=>"candidate"} do |f| %>
       <h2> Submit </h2>
       <h3> Name </h3>
