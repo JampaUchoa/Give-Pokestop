@@ -109,7 +109,7 @@ function poll() {
             });
 
             marker.infoWindow = new google.maps.InfoWindow({
-                content: "<div class='marker'> <img src="+ item.image.url +"/> <h2> "+ item.name +"</h2> <p> "+ item.description+ " <p> <i> "+ item.comment +" </i></div>",
+                content: "<div class='marker'> <img src="+ item.image.url +"> <h2> "+ item.name +"</h2> <p> "+ item.description+ " <p> <i> "+ item.comment +" </i></div>",
                 disableAutoPan: true
             });
 
@@ -138,7 +138,13 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+  $('body').on('click', '.entry', function () {
+    toggleView("login");
+  });
+
 });
+
+
 
 function flash(text) {
   $(".alert-js").removeClass("hidden");
