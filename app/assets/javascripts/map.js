@@ -83,11 +83,10 @@ function addListeners(marker){
 
 function poll() {
 
-  setTimeout(poll, 3000)
-
   if (map.getBounds() == undefined){
     console.log("undefined");
     return;
+    setTimeout(poll, 2000)
   }
 
   $.ajax({url: "candidate",
@@ -118,6 +117,8 @@ function poll() {
         });
         }).fail(function() {
           console.log("fail");
+        }).always(function() {
+          setTimeout(poll, 5000);
         });
 }
 
