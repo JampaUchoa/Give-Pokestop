@@ -85,8 +85,8 @@ function poll() {
 
   if (map.getBounds() == undefined){
     console.log("undefined");
+    setTimeout(poll, 100);
     return;
-    setTimeout(poll, 2000)
   }
 
   $.ajax({url: "candidate",
