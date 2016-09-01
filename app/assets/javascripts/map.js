@@ -99,7 +99,7 @@ function poll() {
         }).done(function(data) {
 
           $.each(data.result, function(i, item){
-            var myIcon = new google.maps.MarkerImage('/marker.png', null, null, null, new google.maps.Size(30,30));
+            var myIcon = new google.maps.MarkerImage('/marker.png', null, null, null, new google.maps.Size(35,35));
 
             var marker = new google.maps.Marker({
                position: {lat: item.latitude, lng: item.longitude},
