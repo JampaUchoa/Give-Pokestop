@@ -99,12 +99,13 @@ function poll() {
         }).done(function(data) {
 
           $.each(data.result, function(i, item){
-            var icon = new google.maps.MarkerImage('static/icons/'+item.pokemon_id+'.png', null, null, null, new google.maps.Size(30,30));
+            var myIcon = new google.maps.MarkerImage('/marker.png', null, null, null, new google.maps.Size(30,30));
 
             var marker = new google.maps.Marker({
                position: {lat: item.latitude, lng: item.longitude},
                map: map,
-               title: item.name
+               title: item.name,
+               icon: myIcon
             });
 
             marker.infoWindow = new google.maps.InfoWindow({
