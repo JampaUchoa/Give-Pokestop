@@ -39,7 +39,7 @@
     <%= form_for Candidate.new, url: {action: "create", :controller=>"candidate"} do |f| %>
       <h2> Submit </h2>
       <h3> Name </h3>
-      <%= f.text_field :name, required: true, :maxlength => 20, :minlength => 2, placeholder: "If possible, use a official name." %>
+      <%= f.text_field :name, required: true, :maxlength => 30, :minlength => 2, placeholder: "If possible, use a official name." %>
 
       <h3> Description </h3>
       <%= f.text_area :description, :maxlength => 140, placeholder: "Include a description about the place." %>
