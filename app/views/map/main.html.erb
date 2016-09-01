@@ -25,12 +25,12 @@
 
   <div class="manual view">
     <h3> What is this? </h2>
-    <p> Rural players can't play pokemon properly because of the absence of pokestops and gyms. </p>
-    <p> This website was created so we can all add interesting point of interests and vote on them, and (hopefully) make niantic add them. </p>
+    <p> Rural players can't play pokemon properly due of the absence of pokestops and gyms. </p>
+    <p> This website was created so we can all add point of interests, and (hopefully) make niantic integrate them. </p>
     <p> All map submissions will be made public and easily acessible for everyone.</p>
 
     <h3> Getting started </h2>
-    <p> To start requesting just click on the map, make sure you are logged in first. </p>
+    <p> To start a pokestop request just click on the map, make sure you are logged in first. </p>
     <p> Please read <a href="https://support.ingress.com/hc/en-us/articles/207343987-Candidate-Portal-criteria"> Niantic Guidelines </a> before submiting your request.</p>
 
   </div>
@@ -39,10 +39,10 @@
     <%= form_for Candidate.new, url: {action: "create", :controller=>"candidate"} do |f| %>
       <h2> Submit </h2>
       <h3> Name </h3>
-      <%= f.text_field :name, required: true, :maxlength => 30, :minlength => 2, placeholder: "If possible, use a official name." %>
+      <%= f.text_field :name, required: true, :maxlength => 30, :minlength => 2, placeholder: "If possible, use an official name." %>
 
       <h3> Description </h3>
-      <%= f.text_area :description, :maxlength => 140, placeholder: "Include a description about the place. Not required but nice to have" %>
+      <%= f.text_area :description, :maxlength => 140, placeholder: "Include a description about the place. Not required but nice to have." %>
 
       <h3> Image </h3>
 
@@ -69,7 +69,7 @@
     <div class="social-container">
       <a href="/auth/facebook"> <img class="social-login" src="<%= image_path 'loginfacebook.png' %>"></a>
     </div>
-    <i> Your information (name, image) will remain private until you choose not to, this is necessary to prevent spam. </i>
+    <i> Your information (name, image) will remain private, this is a measure to prevent spam and vote manipulation. </i>
   </div>
 
 </div>
