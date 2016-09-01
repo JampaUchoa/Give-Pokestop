@@ -125,6 +125,7 @@ function toggleView(view){
   $(".view").addClass("hidden");
   $("."+ view +"").removeClass("hidden");
   flashClear();
+  toggleWindow()
 }
 
 $(document).on('turbolinks:load', function() {
@@ -142,6 +143,10 @@ $(document).on('turbolinks:load', function() {
     toggleView("login");
   });
 
+  $('body').on('click', '.jump-map', function () {
+    toggleWindow();
+  });
+
 });
 
 
@@ -154,4 +159,9 @@ function flash(text) {
 
 function flashClear() {
   $(".alert-js").addClass("hidden");
+}
+
+
+function toggleWindow() {
+  $(".aside, #map").toggleClass("hidden-mo");
 }

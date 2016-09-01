@@ -38,13 +38,17 @@ h1{
     margin: 10px 40px 0 0;
     padding: 5px 25px;
     font-size: 26px;
-    color: #fff;
-    background-color: #3061d4;
+    color: #555;
+    background-color: #eee;
     border-radius: 5px;
     cursor: pointer;
   }
   p{
     margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #555;
   }
 }
 #map{
@@ -59,7 +63,7 @@ h1{
 }
 
 .view {
-  padding: 15px;
+  padding: 10px 20px;
   h2{
     text-align: center;
     margin: 0;
@@ -101,7 +105,21 @@ h1{
     color: #444;
   }
   input[type="file"]{
-    border: 0;
+    border: 1px solid #DEE1E5;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    padding: 5px 0px;
+    border-bottom: 3px solid #DEE1E5;
+    padding: 5px 2px;
+  }
+  .send{
+    background-color: #105eaa;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    border: 1px solid #09478a;
+    border-bottom: 4px solid #09478a;
+    margin: 3px;
   }
 }
 .manual h3{
@@ -134,19 +152,18 @@ h1{
 }
 #add-candidate{
 
-  /* background-color: blue; */
   cursor: pointer;
-  border: 1px solid #1578ba;
-  padding: 6px;
+  border: 1px solid #09478a;
+  border-bottom: 4px solid #09478a;
+  padding: 10px;
   border-radius: 3px;
   color: white;
-  background: #0c55a7;
-  background: -webkit-linear-gradient(top, #0c55a7 0%, #31e7f8 100%);
-  background: linear-gradient(to bottom, #0c55a7 0%, #3abbc7 100%);
+  background: #105eaa;
+  font-size: 14px;
 }
 
 #footer{
   text-align: center;
-  border-top: 1px solid $border-color;
+//  border-top: 1px solid $border-color;
   clear: both;
 }

@@ -1,0 +1,37 @@
+@media screen and (max-width: 800px) {
+  .hidden-mo{
+    display: none;
+  }
+  #map{
+    width: 100%;
+    float: none;
+  }
+
+  .aside{
+    width: 100%;
+  }
+
+  .header{
+//    display: none;
+  }
+
+  .toggle {
+      width: 4.3em;
+      height: 4.3em;
+      position: absolute;
+      background-color: #3061d4;
+      z-index: 99;
+      border-radius: 100%;
+      bottom: 0;
+      right: 0;
+      margin: 10px;
+  }
+
+  .header .entry {
+      margin: 10px 0px 0 0;
+      padding: 8px 15px;
+      font-size: 20px;
+      background-color: #fff;
+  }
+
+}

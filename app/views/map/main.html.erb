@@ -1,16 +1,18 @@
 <div class="header">
-  <h1> Pokestop Suggestion (BETA!) </h1>
+  <h1> Give Stop </h1>
   <div class="entry">
     <% if current_user %>
-      <%= link_to 'Log Out', logout_path, method: :delete %></li>
+      <%= link_to 'Logout', logout_path, method: :delete %></li>
     <% else %>
     <p> Join </p>
     <% end %>
   </div>
 </div>
 <%#= console %>
+<div class="toggle" onclick="toggleWindow();"></div>
+
 <div id="map"></div>
-<div class="aside">
+<div class="aside hidden-mo">
 
   <div class="alert alert-js hidden">
   </div>
@@ -64,7 +66,7 @@
 
       <%= f.text_area :comment, placeholder: "Tell why this should be a Pokestop. Optional" %>
 
-      <%= f.submit "Send" %>
+      <%= f.submit "Send", class: "send" %>
     <% end %>
   </div>
 
@@ -82,3 +84,4 @@
 <div id="footer">
 <p>  </p>
 </div>
+<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNL4T60Jhr-30IesSLKDdpZvUeRRQRb0I&callback=initMap"></script>
