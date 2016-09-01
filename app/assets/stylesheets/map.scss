@@ -62,6 +62,8 @@ h1{
 .aside{
   float: left;
   width: 400px;
+  height: calc(100% - 60px);
+  overflow: scroll
 }
 
 .view {
