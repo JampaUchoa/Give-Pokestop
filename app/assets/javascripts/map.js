@@ -125,7 +125,6 @@ function toggleView(view){
   $(".view").addClass("hidden");
   $("."+ view +"").removeClass("hidden");
   flashClear();
-  toggleWindow()
 }
 
 $(document).on('turbolinks:load', function() {
@@ -133,14 +132,17 @@ $(document).on('turbolinks:load', function() {
   $('#map').on('click', '#add-candidate', function () {
     if (loggedIn){
       toggleView("form");
+      toggleWindow();
     } else{
       flash("You must log in to add a Pokestop");
       toggleView("login");
+      toggleWindow();
     }
   });
 
   $('body').on('click', '.entry', function () {
     toggleView("login");
+    toggleWindow();
   });
 
   $('body').on('click', '.jump-map', function () {
